@@ -33,7 +33,7 @@ Predicate variables with no restrictions or domain are considered **free** in th
 
 There are two quantifiers we apply to predicates: universal and existential.
 
-The **universal quantifier, ∀**, asserts within a predicate that every variable value within the specified domain will make the predicate true.
+The **universal quantifier, ∀**, asserts within a predicate that every variable value within the specified domain will make the predicate true. When writing quantifiers, we use the set inclusion operator ∈ to denote a single value from a variable domain.
 
 ```ts
 // Example 1: (∀x∈R)[x^2 >= 0]
@@ -41,7 +41,7 @@ The **universal quantifier, ∀**, asserts within a predicate that every variabl
 // Example 2: "Every student is enrolled in a class."
 ```
 
-The **existential quantifier, ∃**, asserts within a predicate that at least one variable value within the specified domain will make the predicate.
+The **existential quantifier, ∃**, asserts within a predicate that at least one variable value within the specified domain will make the predicate true.
 
 ```ts
 // Example 1: (∃y∈R)[x^2 = 16]
