@@ -50,7 +50,7 @@ The **existential quantifier, ∃**, asserts within a predicate that at least on
 // Example 2: "There exists a student who has failed a class."
 ```
 
-3. Conditional Logic
+## 3. Conditional Logic
 
 We can conjoin multiple propositions into complex truth statements using conditional logic operators.
 
@@ -112,11 +112,11 @@ The **xor (exclusive or) operator, ⊕**, specifies that either the operand befo
 // Then A⊕B must be the sentence "I passed my exam or I failed my exam".
 ```
 
-The **implication connective operator, =>**, specifies that one operand leads to another. If we have the expression `P => Q`, it is said that P "implies" Q.
+The **implication connective operator, `=>`**, specifies that one operand leads to another. If we have the expression `P => Q`, it is said that P "implies" Q.
 
 The terms **necessary** and **sufficient** are used to describe implication. In the above expression, we can say Q is **necessary** for P because it is impossible to have P without having Q. Similarly, we can say P is **sufficient** for Q because P being true implies that Q is true, but P not being true does not guarantee Q is true.
 
-| P | Q | P => Q |
+| P | Q | `P => Q` |
 | --- | --- | --- |
 | T | T | T |
 | T | F | F |
@@ -138,7 +138,7 @@ The terms **necessary** and **sufficient** are used to describe implication. In 
 // Then K must be true.
 ```
 
-The **biconditional connective operator, <=>**, specifies that two operands are directly related to each other. If we have the expression `P <=> Q`, it is said that P "if and only if" Q. This means Q will always be true when P is true, and false when P is false. The same applies both ways.
+The **biconditional connective operator, `<=>`**, specifies that two operands are directly related to each other. If we have the expression `P <=> Q`, it is said that P "if and only if" Q. This means Q will always be true when P is true, and false when P is false. The same applies both ways.
 
 | P | Q | `P <=> Q` |
 | --- | --- | --- |
@@ -153,9 +153,9 @@ The **biconditional connective operator, <=>**, specifies that two operands are 
 // Then "A if and only if B" is true.
 ```
 
-The order of operations is important when evaluating expressions. Below is the order of operations from highest priority to least priority.
+The order of operations is important when evaluating expressions. Below is the order of operations from highest priority (left) to least priority (right).
 
-```ts
+```
 ¬ ∀ ∃ ∧ ⊕ ∨ => <=>
 ```
 
