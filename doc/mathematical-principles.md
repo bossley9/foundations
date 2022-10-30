@@ -206,3 +206,5 @@ Additionally, the following identities derived from De Morgan's Laws prove helpf
 // P => Q ≡ ¬P ∨ Q
 // P => Q ≡ ¬Q => ¬P
 ```
+
+[Home](../README.md)
