@@ -8,6 +8,7 @@ Computer science is founded in its entirety on mathematical principles and logic
 2. [Quantifiers](#2-quantifiers)
 3. [Conditional Logic](#3-conditional-logic)
 4. [Special Expressions](#4-special-expressions)
+5. [Identities and Laws](#5-identities-and-laws)
 
 ## 1. Propositions and Predicates
 
@@ -185,4 +186,23 @@ A **contingency** is a predicate that is entirely dependent on variables.
 ```ts
 // Example:
 // A∧A will always be dependent on the value of A.
+```
+
+## 5. Identities and Laws
+
+De Morgan's Laws can be used to simplify mathematical expressions:
+
+```ts
+// De Morgan's Law of Union:
+// ¬(A ∨ B) ≡ ¬A ∧ ¬B
+
+// De Morgan's Law of Intersection:
+// ¬(A ∧ B) ≡ ¬A ∨ ¬B
+```
+
+Additionally, the following identities derived from De Morgan's Laws prove helpful in rearranging expressions further:
+
+```ts
+// P => Q ≡ ¬P ∨ Q
+// P => Q ≡ ¬Q => ¬P
 ```
