@@ -7,6 +7,7 @@ Computer science is founded in its entirety on mathematical principles and logic
 1. [Propositions and Predicates](#1-propositions-and-predicates)
 2. [Quantifiers](#2-quantifiers)
 3. [Conditional Logic](#3-conditional-logic)
+4. [Special Expressions](#4-special-expressions)
 
 ## 1. Propositions and Predicates
 
@@ -112,7 +113,7 @@ The **xor (exclusive or) operator, ⊕**, specifies that either the operand befo
 // Then A⊕B must be the sentence "I passed my exam or I failed my exam".
 ```
 
-The **implication connective operator, `=>`**, specifies that one operand leads to another. If we have the expression `P => Q`, it is said that P "implies" Q.
+The **implication operator, `=>`**, specifies that one operand leads to another. If we have the expression `P => Q`, it is said that P "implies" Q.
 
 The terms **necessary** and **sufficient** are used to describe implication. In the above expression, we can say Q is **necessary** for P because it is impossible to have P without having Q. Similarly, we can say P is **sufficient** for Q because P being true implies that Q is true, but P not being true does not guarantee Q is true.
 
@@ -138,7 +139,7 @@ The terms **necessary** and **sufficient** are used to describe implication. In 
 // Then K must be true.
 ```
 
-The **biconditional connective operator, `<=>`**, specifies that two operands are directly related to each other. If we have the expression `P <=> Q`, it is said that P "if and only if" Q. This means Q will always be true when P is true, and false when P is false. The same applies both ways.
+The **biconditional operator, `<=>`**, specifies that two operands are directly related to each other. If we have the expression `P <=> Q`, it is said that P "if and only if" Q. This means Q will always be true when P is true, and false when P is false. The same applies both ways.
 
 | P | Q | `P <=> Q` |
 | --- | --- | --- |
@@ -160,3 +161,28 @@ The order of operations is important when evaluating expressions. Below is the o
 ```
 
 It is important to note that ∀ and ∃ are commutative respectively.
+
+## 4. Special Expressions
+
+There are a few special expressions we acknowledge by name. These expressions are particularly useful in proofs which we will discuss later.
+
+A **tautology** is a predicate that always evaluates to true.
+
+```ts
+// Example:
+// A∨¬A will always be true.
+```
+
+A **contradiction** is a predicate that always evaluates to false.
+
+```ts
+// Example:
+// A∧¬A will always be false.
+```
+
+A **contingency** is a predicate that is entirely dependent on variables.
+
+```ts
+// Example:
+// A∧A will always be dependent on the value of A.
+```
