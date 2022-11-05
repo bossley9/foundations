@@ -6,6 +6,8 @@ A summary of software foundations
 
 1. [Introduction](#1-introduction)
 2. [Mathematical Principles](./doc/mathematical-principles.md)
+3. [Data Structures](./doc/data-structures.md)
+4. [Algorithms](./doc/algorithms.md)
 
 ## 1. Introduction
 
@@ -14,3 +16,7 @@ Software foundations are the underlying scientific and mathematical principles t
 I will be using [Typescript](https://www.typescriptlang.org/) to represent any data structures or algorithms in code due to its simple but typed syntax. I also work with this language on a daily basis so it will be easy for me to represent these concepts in a cleanly fashion.
 
 ## [2. Mathematical Principles](./doc/mathematical-principles.md)
+
+## [3. Data Structures](./doc/data-structures.md)
+
+## [4. Algorithms](./doc/algorithms.md)
