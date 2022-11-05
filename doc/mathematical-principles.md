@@ -9,6 +9,7 @@ Computer science is founded in its entirety on mathematical principles and logic
 3. [Conditional Logic](#3-conditional-logic)
 4. [Special Expressions](#4-special-expressions)
 5. [Identities and Laws](#5-identities-and-laws)
+6. [Proofs](#6-proofs)
 
 ## 1. Propositions and Predicates
 
@@ -206,5 +207,83 @@ Additionally, the following identities derived from De Morgan's Laws prove helpf
 // P => Q ≡ ¬P ∨ Q
 // P => Q ≡ ¬Q => ¬P
 ```
+
+## 6. Proofs
+
+Mathematical proofs are the ways in which we logically state conclusions based on mathematical expressions and inference, often employing the properties and techniques described above. Proofs draw conclusions and create definitions we can use. There are different kinds of definitions we employ:
+
+* an **axiom** is a statement which is taken as self-evident without further question. There is no need to prove an axiom. For example, "things which are equal to the same thing are equal to one another" can be considered an axiom.
+* a **theorem** is a proven proposition using axioms and existing knowns.
+* a **lemma** is a proven proposition similar to a theorem but generally used in the context of smaller stepping stones to discover a bigger theorem.
+* a **corollary** is a theorem that follows as the result of another theorem.
+* a **law** usually refers to a common axiom but can also refer to a theorem or common formula.
+
+There are three main types of proofs:
+
+1. A **direct** proof is a proof that draws a conclusion based on combining known definitions, laws, and axioms.
+    ```ts
+    // Example:
+    // Prove without using De Morgan's Laws that ¬(P ∨ Q) is logically equivalent to ¬P ∧ ¬Q.
+
+    // Suppose that ¬(P ∨ Q) is true.
+    // Then P ∨ Q must be false.
+    // So both P and Q must be false.
+    // Then both ¬P and ¬Q must be true.
+    // Therefore, ¬P ∧ ¬Q is true.
+
+    // Conversely, suppose that ¬P ∧ ¬Q is true.
+    // Then both ¬P and ¬Q must be true.
+    // So P and Q must both be false.
+    // Then P ∨ Q is false.
+    // So ¬(P ∨ Q) must be true.
+    // So ¬(P ∨ Q) must be logically equivalent to ¬P ∧ ¬Q.
+    ```
+2. An **induction** proof is a proof that declares the validity of a base case, the validity of any (n+1)th case (called the "inductive step"), then draws a conclusion regarding all values of n combining those two observations.
+    ```ts
+    // Example:
+    // Prove by induction that for each natural number n, we have
+    // 1 + 2 + ... + n = n(n+1) / 2.
+
+    // Proof by induction:
+    // Let P(n) be the sentence "1 + 2 + ... + n = n(n+1) / 2".
+
+    // Base case:
+    // Observe P(1) is true since 1 = 1(1+1) / 2 = 1(2) / 2 = 1.
+
+    // Inductive step:
+    // Consider an n∈N such that P(n) is true.
+    // Then P(n+1) is "1 + 2 + ... + n + (n+1) = (n+1)[(n+1)+1] / 2".
+    // By the inductive hypothesis,
+    // 1 + 2 + ... + n + (n+1) = [n(n+1) / 2] + (n + 1)
+    //   = [(n^2 + n) / 2] + [2(n+1) / 2]
+    //   = (n^2 + n + 2n + 2) / 2
+    //   = (n^2 + 3n + 2) / 2
+    //   = (n+1)(n+2) / 2
+    //   = (n+1)[(n+1)+1] / 2
+    // So P(n+1) is true.
+
+    // Conclusion:
+    // By induction, 1 + 2 + ... + n = n(n+1) / 2 ∀n∈N.
+    ```
+3. A **contradiction** proof is a proof that draws a conclusion by proving that the inverse of the given proof is impossible by design.
+    ```ts
+    // Prove that there are infinitely many prime numbers.
+    // By definition, a prime number p is a positive integer > 1
+    // whose only two factors are 1 and p.
+    // In addition, according to the fundamental theorem of arithmetic,
+    // any integer above 1 is either a prime number or can be made by multiplying primes together.
+    // Note: The phrase "z|x" reads as "z divides x".
+
+    // Suppose there are finitely many prime numbers called P_1, P_2, P_3, ..., P_n.
+    // Let x = P_1 * P_2 * P_3 * ... * P_(n-1) * P_n be the product of all primes.
+    // Consider the number y = x + 1.
+
+    // We know y∈N and y != 1, and we know there exists a prime q such that q|y.
+    // Since we have listed all the primes, q must be one of the listed primes where q = P_i for some i.
+    // So q|x and q|y, meaning q|y-x, but y-x=1.
+    // So q|1.
+    // Contradiction, q cannot divide 1 because q is prime and must be greater than 1.
+    // Therefore, there must be infinitely many prime numbers.
+    ```
 
 [Home](../README.md)
