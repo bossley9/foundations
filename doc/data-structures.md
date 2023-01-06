@@ -7,10 +7,13 @@ In this section we will discuss the different kinds of data structures and how e
 ## Table of Contents
 
 1. [Set](#1-set)
+2. [Array](#2-array)
+3. [Queue](#3-queue)
+4. [Stack](#4-stack)
 
 ## 1. Set
 
-A **set** represents an unordered collection of items that contains no duplicates. Imagine a bag of items but each item can only be put in the bag once. When reaching into the bag, you have the opportunity to take any item out of the bag. Sets are denoted with curly brackets.
+A **set** is an unordered collection of items that contains no duplicates. Imagine a bag of items but each item can only be put in the bag once. When reaching into the bag, you have the opportunity to take any item out of the bag. Sets are denoted with curly brackets.
 
 The **cardinality** of a set, **|A|**, is the number of items contained in that set. It is the length of the set.
 
@@ -92,6 +95,58 @@ The **power set** of A, **P(A)**, is the set containing the union of all subsets
 ```ts
 // Example 1:
 // If A = { 1, 2 }, P(A) = { {}, { 1 }, { 2 }, { 1, 2 }, }.
+```
+
+## 2. Array
+
+An **array** is a collection of items with an index, or position, assigned to each item. Most (but not all) implementations of arrays are **0-indexed**, meaning they begin counting index from 0. Because items have their index recorded, order matters. As with most data structures, the number of items contained in an array is called its **length**. Arrays are denoted with square brackets.
+
+Many implementations of arrays allow users to insert and delete items at any position.
+
+```ts
+// Example 1:
+// [ 1, 5, 9, 5 ] is an array.
+
+// Example 2:
+// Let A = [ 1, 92, 0 ] be an array.
+// Then A[0] = 1, A[1] = 92, and A[2] = 0.
+
+// Example 3:
+// Let A = [ 1, 3, 4, 5 ] be an array.
+// Insert 2 at A[1].
+// Then A = [ 1, 2, 3, 4, 5 ].
+```
+
+## 3. Queue
+
+A **queue** is a collection of items that are inserted from a specific direction and deletion from another direction. In this way, queues follow **FIFO** (first in, first out) ordering. Think of a queue like a ticket line where position in the line matters. New members to the line are added to the back, with members receiving their ticket and exiting the line from the front. When a new item is added, it is **enqueued** to the queue, and when an item is deleted, it is **dequeued** from the queue. Queues are denoted with square brackets and usually enqueue on the left and dequeue on the right.
+
+```ts
+// Example 1:
+// Let A = [ 23, 94, 7 ] be a queue.
+// Enqueue 3 to A.
+// Then A = [ 3, 23, 94, 7 ].
+
+// Example 2:
+// Let A = [ 9 ] be a queue.
+// Dequeue from A.
+// Then A = [ ] and the length of A is 0.
+```
+
+## 4. Stack
+
+A **stack** is a collection of items that are inserted and deleted from the same direction. Stacks follow **LIFO** (last in, first out) ordering. Think of a queue like a PEZ candy dispenser. Candy can only be taken from the place in which it is inserted. When a new item is added, it is **pushed** to the stack, and when an item is deleted, it is **popped** from the stack. Stacks are denoted with square brackets and usually push and pop on the right.
+
+```ts
+// Example 1:
+// Let A = [ 1, 4, 0 ] be a stack.
+// Push 16 to A.
+// Then A = [ 1, 4, 0, 16 ].
+
+// Example 2:
+// Let A = [ 8, 3, 5 ] be a stack.
+// Pop from the stack.
+// Then A = [ 8, 3 ].
 ```
 
 [Home](../README.md)
